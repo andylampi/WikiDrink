@@ -1,36 +1,414 @@
+:root{
+  --opacity_info : 0; 
+}
+
+html{
+  height: 100%;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.navbar{
+.navbar {
   display: flex;
   width: 100%;
   justify-content: space-around;
   height: 4rem;
   align-items: center;
   font-size: 20px;
+  box-shadow:  0 2px 8px rgba(0,0,0,0.1);
 }
-.navbar h3, h5{
+.navbar h3,
+h5 {
   margin: 0;
 }
-.link{
+.link {
   text-decoration: none;
   color: #3a0ca3;
 }
-.link:hover{
+.link:hover {
   color: #f72585;
 }
-.link_icon{
+.link_icon {
   display: flex;
-  gap: 15px
+  gap: 15px;
 }
 
+.central_image {
+  width: 100%;
+  height: 900px;
+  background: url("https://usacoastocoast.files.wordpress.com/2021/03/pexels-photo-1283219.jpeg?w=640");
+  margin-bottom: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.dark_filter {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 900px;
+}
+.container_description {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  height: 900px;
+  justify-content: center;
+  width: 540px;
+  text-align: left;
+  margin-left: 100px;
+}
+#free {
+  color: #f72585;
+}
+.container_description h2 {
+  color: #f72585;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.08rem;
+}
+.container_description h2 {
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin: 0
+}
+.container_description h4 {
+  font-feature-settings: "smcp";
+  font-variant: small-caps;
+  font-size: 1.25rem;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.container_description p{
+  line-height: 1.6;
+  color: #ced4da;
+}
+/***************************************************/
+.button_explain{
+  border: 0;
+  width: 150px;
+  border-radius: 30px;
+  background-color: #f72585;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.link_explain{
+  text-decoration: none;
+  color: white
+}
+.button_explain:hover{
+  background-color: #3a0ca3;
+}
+.container_search{
+  display: flex;
+  width: 450px;
+  justify-content: space-between;
+  
+}
+.search_input{
+  border-radius: 20px;
+  border: 1px #6c757d solid;
+  padding-left: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.button_search{
+  color: #f72585;
+  border: 0;
+  background-color: transparent;
+}
+.search_container_parents{
+  display: flex;
+}
+.search_container_parents h5{
+  font-weight: 700;
+}
+/**********************************************/
+.drinks{
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.drink img{
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+}
+.drink .info{
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 400px; 
+  bottom: 0;
+  background-color: rgba(43, 43, 43, 0.7);
+  height: 60px;
+  opacity: var(--opacity_info);
+  border-radius: 10px;
+  align-items: center;
+}
+.drink{
+  position: relative;
+}
+
+.main_part{
+  display: flex;
+  flex-direction: column;
+  margin-left: 90px;
+}
+.error{
+  display: flex;
+  border: 1px solid rgb(255, 10, 84);
+  color: rgba(255, 10, 84, 0.8);
+  background-color: rgba(255, 10, 84, 0.2);
+  width: 60%;
+  height: 60px;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+.drink:hover{
+  --opacity_info: 1;
+}
+/**************************************************/
+.ric_principal{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  gap: 80px;
+  height: 837px;
+}
+.title_drink{
+  color: white;
+}
+.ric_drink{
+  color:rgb(255, 10, 84)
+}
+.ric{
+  width: 80px;
+  display: flex;
+  color: rgb(255, 10, 84);
+  justify-content: space-between;
+  text-decoration: none;
+}
+.ric:hover{
+  color: rgb(255, 10, 84);
+}
+.back{
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  width: 280px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.back h4{
+  color: #adb5bd;
+  font-weight: 400;
+}
+.ric_central{
+  display: flex;
+}
+.ric_central img{
+  width: 300px;
+  border-radius: 10px;
+}
+.ric_info{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-left: 10%;
+}
+.ric_principal h4, p, li{
+  color:#6c757d;
+}
+.type{
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+.type p{
+  background-color: #f8f9fa;
+  color: #89949e;
+  border: 1px solid #f2f2f3;
+  letter-spacing: 0.08rem;
+  font-size: 0.8em;
+  padding: 0rem 0.5rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+.back button{
+  border: 0;
+  background-color: transparent;
+  color: #f72585;
+}
+/**********************************************/
+
+.main_aboutus{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/************************************************/
+.footer{
+  background-color: #3a0ca3;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserved{
+  color: #efefef;
+  font-feature-settings: "smcp";
+  font-variant: small-caps;
+  font-size: 1.03em!important;
+}
+.footer .drink_team{
+  color: #f72585;
+  font-feature-settings: "smcp";
+  font-variant: small-caps;
+  font-size: 1.03em!important;
+  font-weight: 500;
+  padding-left: 10px;
+}
+ /*********************************************************/
+/************************ABOUT*****************************/
+ /*******************************************************/
+.about_main{
+  width: 100%;
+  height: 900px;
+  background: url("https://www.saporideisassi.it/blog/wp-content/uploads/versare_whisky.jpg");
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about_phrase{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 900px;
+  color: white;
+  justify-content: center;
+}
+.about_content{
+  display: flex;
+  width: 600px;
+  text-align: center;
+  font-style: italic;
+}
+.about_first_line{
+  background-color: #f72585;
+  height: 3px;
+  opacity: 1;
+  border-radius: 20px;
+  border: 0;
+  margin-left: 60px;
+  margin-right: 60px;
+
+}
+
+/****************************************/
+
+.project{
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+  background-color: #f8f9fa;
+}
+.three_fond{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.project h3{
+  margin-top: 30px;
+  color: #3a0ca3;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.project .educare, .insegnare, .centralizzare{
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  width: 353px;
+  align-items: center;
+  background-color: white;
+  padding: 30px;
+}
+.project p{
+  color: #adb5bd;
+}
+.cap{
+  color:rgb(255, 10, 84)
+}
+.project .educare:hover, .insegnare:hover, .centralizzare:hover{
+  background-color: #3a0ca3;
+  color: white;
+}
+/**********************************************/
+.about_image_secondary {
+  position: relative;
+  height: 800px;
+  max-width: 100%;
+  background: url("https://wiki-drink.netlify.app/static/media/team-img.6d8d440b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover
+}
+.about_image_secondary::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100.1%;
+  background-color: #fff;
+  height: 17vh;
+  clip-path: polygon(100% 0,-80% 130%,100% 100%);
+}
+.team h3{
+  margin-top: 30px;
+  color: #3a0ca3;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.star{
+  display: flex;
+  margin-left: 25%;
+  margin-right: 25%;
+  justify-content: space-around;
+}
+.person img{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.person{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
