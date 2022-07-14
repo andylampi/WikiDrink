@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import DrinkDates from "../../containers/DrinksDates";
+import Footer from "../Footer/Footer";
 import Drink from "./Drink";
 import Error from "./Error";
 import SearchPart from "./SearchPart";
@@ -30,7 +31,7 @@ const Home = () => {
         <div className="dark_filter">
           <div className="container_description">
             <h2>WIKI DRINK</h2>
-            <h4>Tutti i cocktail del mondo a portato di click</h4>
+            <h4>Tutti i cocktail del mondo a portata di click</h4>
             <div>
               <p>
                 Wiki Drink è un database internazionale che mette a tue
@@ -56,6 +57,7 @@ const Home = () => {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
